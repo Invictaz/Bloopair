@@ -112,6 +112,7 @@ int isOfficialName(const char* name)
 void controllerInit_switch(Controller_t* controller, uint8_t isProController, uint8_t right_joycon);
 void controllerInit_xbox_one(Controller_t* controller);
 void controllerInit_dualsense(Controller_t* controller);
+void controllerInit_dualshock(Controller_t* controller);
 
 int initController(uint8_t handle, uint8_t* name, uint16_t vendor_id, uint16_t product_id)
 {
@@ -155,6 +156,10 @@ int initController(uint8_t handle, uint8_t* name, uint16_t vendor_id, uint16_t p
             controllerInit_dualsense(&controllers[handle]);
             return 0;
         }
+		else if _strncmp((const char*) name, "PLAYSTATION(R)3 Controller", 0x40) == 0)) { // dualshock3 controller
+			controllerInit_dualshock(&controllers[handle]);
+			return 0;
+		}
     }
 
     DEBUG("unsupported device\n");
