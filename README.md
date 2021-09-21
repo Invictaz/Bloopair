@@ -13,10 +13,21 @@ It temporarily applies patches to the IOS-PAD module responsible for Bluetooth c
 - Nintendo Switch Joy-Con
 - Microsoft Xbox One S/X Controller
 - Sony Dualsense Controller
+- Sony Dualshock 3 Controller (see instructions below)
 
 ## Installation
 - Download the latest .zip from the [releases page](https://github.com/GaryOderNichts/Bloopair/releases)
 - Extract it to the root of your SD Card
+
+## Pair Dualshock 3 controller
+- First run (https://github.com/GaryOderNichts/bluubomb) without any of the kernel files on the SD card of your WiiU. 
+-After the pairing is complete, the WiiU bluetooth address will be shown
+-Note that down
+-The WiiU will turn itself off, this is completely normal, nothing has changed to the CFW
+-Launch SixAxisPairtool on a Windows 64 bit PC, plugin in a usb cable and set the bluetooth address you have just discovered
+-Launch Bloopair from the homebrew launcher 
+-Press sync on the WiiU 
+-Press the Playstation button on the controller, it should now pair
 
 ## Usage
 - Run Bloopair from the Homebrew Launcher  
